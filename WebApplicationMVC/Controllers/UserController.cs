@@ -44,27 +44,6 @@ namespace WebApplicationMVC.Controllers
         ModelState.AddModelError("", error.Message);
       }
 
-
-
-      ////Desabilita a verificação do certificado digital do lado do cliente (Não utilizar em ambiente de produção)
-      ////Inicio
-      //var clientHandler = new HttpClientHandler();
-      //clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-      ////Fim
-
-      //var httpClient = new HttpClient();
-      //httpClient.BaseAddress = new Uri("https://localhost:7032");
-
-      //var registerUserViewModelInputJson = JsonConvert.SerializeObject(registerUserViewModelInput);
-
-      //var httpContent = new StringContent(registerUserViewModelInputJson, Encoding.UTF8, "application/json");
-
-      //var httpPost = httpClient.PostAsync("/api/v1/user/register", httpContent).GetAwaiter().GetResult();
-
-      //string mensage = httpPost.StatusCode == System.Net.HttpStatusCode.Created ? "Usuário cadastrados com sucesso!" : "Erro ao cadastrar!";
-
-      //ModelState.AddModelError("", mensage);
-
       return View();
     }
 

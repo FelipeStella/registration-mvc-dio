@@ -13,7 +13,7 @@ builder.Services.AddHttpContextAccessor();
 //Inicio
 var clientHandler = new HttpClientHandler
 {
-  ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; }
+ // ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; }
 };
 //Fim
 

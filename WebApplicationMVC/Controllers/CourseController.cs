@@ -57,23 +57,6 @@ namespace WebApplicationMVC.Controllers
         ModelState.AddModelError("", error.Message);
       }
 
-
-      //var listCourses = new List<ListCoursesViewModelOutput>();
-
-      //listCourses.Add(new ListCoursesViewModelOutput
-      //{
-      //  Name = "Javascript",
-      //  Description = "Curso de javascript",
-      //  Login = "felipe.stella"
-      //});
-
-      //listCourses.Add(new ListCoursesViewModelOutput
-      //{
-      //  Name = "CSharp",
-      //  Description = "Curso de C#",
-      //  Login = "felipe.stella"
-      //});
-
       return View();
     }
   }
