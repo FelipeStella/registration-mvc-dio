@@ -1,0 +1,57 @@
+﻿@model WebApplicationMVC.Models.LoginViewModelInput
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<h4>LoginViewModelInput</h4>
+<hr />
+
+<form asp-action="login">
+  <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+  <div class="form-group">
+    <label asp-for="LoginProvider" class="control-label">Usuário</label>
+    <input asp-for="LoginProvider" class="form-control" placeholder="Insira o usuário">
+  </div>
+  <div class="form-group">
+    <label asp-for="ProviderKey">Password</label>
+    <input asp-for="ProviderKey" class="form-control" placeholder="Insira a senha">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="examplecheck1">
+    <label class="form-check-label" for="examplecheck1" style="margin-bottom: 10px">lembrar-me</label>
+  </div>
+  <button type="submit" value="login" class="btn btn-primary" style="margin-bottom: 10px">Entrar</button>
+</form>
+
+
+@*<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LoginProvider" class="control-label"></label>
+                <input asp-for="LoginProvider" class="form-control"/>
+                <span asp-validation-for="LoginProvider" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProviderKey" class="control-label"></label>
+                <input asp-for="ProviderKey" class="form-control" />
+                <span asp-validation-for="ProviderKey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
